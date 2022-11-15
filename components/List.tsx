@@ -125,9 +125,6 @@ export const List : NextPage<ListProps> = ({list, getFilteredList}) =>{
                         <input type="text" placeholder='Data de conclusão' value={finishDate} onChange={e => setFinishDate(e.target.value)}
                                 onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'} max="1979-12-31" data-format="00-00-0000"/>
 
-                        <input type="text" placeholder='Data de previsão da tarefa' value={previsionDate} onChange={e => setPrevisionDate(e.target.value)}
-                                onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'} max="1979-12-31" data-format="00-00-0000"/>
-
                 </Modal.Body>
                 <Modal.Footer>
                     <div className='button col-12'>

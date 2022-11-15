@@ -120,10 +120,10 @@ export const List : NextPage<ListProps> = ({list, getFilteredList}) =>{
                             value={name} onChange={e => setName(e.target.value)}/>
 
                         <input type="text" placeholder='Data de previsão da tarefa' value={previsionDate} onChange={e => setPrevisionDate(e.target.value)}
-                                onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'} max="1979-12-31" data-format="00-00-0000"/>
+                                onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'} max="2099-12-31" data-format="DD-MM-YYYY"/>
 
                         <input type="text" placeholder='Data de conclusão' value={finishDate} onChange={e => setFinishDate(e.target.value)}
-                                onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'} max="1979-12-31" data-format="00-00-0000"/>
+                                onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'} max="2099-12-31" data-format="DD-MM-YYYY"/>
 
                 </Modal.Body>
                 <Modal.Footer>

@@ -26,14 +26,11 @@ export const Principal : NextPage<PrincipalProps> = ({setAccessToken}) =>{
     const [error, setError] = useState('');
     const [name, setName] = useState('');
     const [previsionDate, setPrevisionDate] = useState('');
-    const [date, setDate] = useState(new Date());
 
     const sair = () =>{
         localStorage.clear();
         setAccessToken('');
     }
-
-
 
     const getFilteredList = async() => {
         try{
@@ -119,8 +116,8 @@ export const Principal : NextPage<PrincipalProps> = ({setAccessToken}) =>{
 
                         <input type="text" placeholder='Nome da tarefa' value={name} onChange={e => setName(e.target.value)}/>
 
-                        <input type="date" placeholder='Data de previsão da tarefa' onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'}
-                                                value={previsionDate} onChange={e => setPrevisionDate(e.target.value)}/>
+                        <input type="text" placeholder='Data de previsão da tarefa' value={previsionDate} onChange={e => setPrevisionDate(e.target.value)}
+                                onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'} max="1979-12-31" data-format="00-00-0000"/>
 
                 </Modal.Body>
                 <Modal.Footer>

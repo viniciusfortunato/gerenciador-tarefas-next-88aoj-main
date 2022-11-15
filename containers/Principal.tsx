@@ -119,7 +119,7 @@ export const Principal : NextPage<PrincipalProps> = ({setAccessToken}) =>{
 
                         <input type="text" placeholder='Nome da tarefa' value={name} onChange={e => setName(e.target.value)}/>
 
-                        <input type="text" placeholder='Data de previsão da tarefa' onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'}
+                        <input type="date" placeholder='Data de previsão da tarefa' onFocus={e => e.target.type='date'} onBlur={e => e.target.type='text'}
                                                 value={previsionDate} onChange={e => setPrevisionDate(e.target.value)}/>
 
                 </Modal.Body>
